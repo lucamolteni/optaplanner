@@ -29,12 +29,13 @@
       <entityClass>org.optaplanner.examples.cloudbalancing.domain.CloudProcess</entityClass>
       <scoreDirectorFactory>
         <constraintProviderClass>org.optaplanner.examples.cloudbalancing.score.CloudBalancingConstraintProvider</constraintProviderClass>
-        <constraintStreamImplType>DROOLS</constraintStreamImplType>
-<!--        <constraintStreamImplType>BAVET</constraintStreamImplType>-->
+<!--        <constraintStreamImplType>DROOLS</constraintStreamImplType>-->
+        <constraintStreamImplType>BAVET</constraintStreamImplType>
         <initializingScoreTrend>ONLY_DOWN/ONLY_DOWN</initializingScoreTrend>
       </scoreDirectorFactory>
       <termination>
         <minutesSpentLimit>1</minutesSpentLimit>
+<!--        <secondsSpentLimit>10</secondsSpentLimit>-->
       </termination>
     </solver>
     <problemBenchmarks>
@@ -43,12 +44,13 @@
             <inputSolutionFile>data/cloudbalancing/unsolved/2computers-6processes.json</inputSolutionFile>
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/3computers-9processes.json</inputSolutionFile>-->
 <!--      <inputSolutionFile>data/cloudbalancing/unsolved/4computers-12processes.json</inputSolutionFile>-->
+      <!--<inputSolutionFile>data/cloudbalancing/unsolved/4computers-12processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/5computers-15processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/6computers-18processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/7computers-21processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/8computers-24processes.json</inputSolutionFile>-->
-<!--      <inputSolutionFile>data/cloudbalancing/unsolved/9computers-27processes.json</inputSolutionFile>-->
-<!--      <inputSolutionFile>data/cloudbalancing/unsolved/10computers-30processes.json</inputSolutionFile>-->
+      <!--<inputSolutionFile>data/cloudbalancing/unsolved/9computers-27processes.json</inputSolutionFile>-->
+      <!--<inputSolutionFile>data/cloudbalancing/unsolved/10computers-30processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/11computers-33processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/12computers-36processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/13computers-39processes.json</inputSolutionFile>-->

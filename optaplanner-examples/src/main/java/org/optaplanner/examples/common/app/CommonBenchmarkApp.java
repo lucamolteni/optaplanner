@@ -46,6 +46,9 @@ public abstract class CommonBenchmarkApp extends LoggingMain {
     }
 
     public void buildAndBenchmark(String[] args) {
+        long pid = ProcessHandle.current().pid();
+        logger.info("Starting benchmark with process ID: {} ", pid);
+
         // Parse arguments
         boolean aggregator = false;
         ArgOption argOption = null;
