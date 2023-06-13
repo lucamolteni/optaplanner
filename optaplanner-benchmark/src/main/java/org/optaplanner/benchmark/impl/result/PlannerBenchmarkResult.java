@@ -54,6 +54,8 @@ public class PlannerBenchmarkResult {
 
     private String name;
     private Boolean aggregation;
+
+    private String constraintStreamImplType;
     @XmlTransient // Moving or renaming a report directory after creation is allowed
     private File benchmarkReportDirectory;
 
@@ -218,6 +220,10 @@ public class PlannerBenchmarkResult {
         return favoriteSolverBenchmarkResult;
     }
 
+    public void setConstraintStreamImplType(String constraintStreamImplType) {
+        this.constraintStreamImplType = constraintStreamImplType;
+    }
+
     // ************************************************************************
     // Smart getters
     // ************************************************************************
@@ -261,6 +267,10 @@ public class PlannerBenchmarkResult {
 
     public void initBenchmarkReportDirectory(File benchmarkDirectory) {
         String timestampString = startingTimestamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HHmmss"));
+        if (constraintStreamImplType != null) {
+            timestampString = timestampString + "-" + constraintStreamImplType;
+        }
+
         if (name == null || name.isEmpty()) {
             name = timestampString;
         }

@@ -39,6 +39,7 @@ import org.optaplanner.benchmark.config.report.BenchmarkReportConfig;
 import org.optaplanner.benchmark.impl.report.BenchmarkReport;
 import org.optaplanner.benchmark.impl.report.BenchmarkReportFactory;
 import org.optaplanner.benchmark.impl.result.PlannerBenchmarkResult;
+import org.optaplanner.core.api.score.stream.ConstraintStreamImplType;
 import org.optaplanner.core.config.util.ConfigUtils;
 import org.optaplanner.core.impl.solver.thread.DefaultSolverThreadFactory;
 import org.slf4j.Logger;
@@ -92,6 +93,13 @@ public class DefaultPlannerBenchmarkFactory extends PlannerBenchmarkFactory {
             SolverBenchmarkFactory solverBenchmarkFactory = new SolverBenchmarkFactory(solverBenchmarkConfig);
             solverBenchmarkFactory.buildSolverBenchmark(plannerBenchmarkConfig.getClassLoader(), plannerBenchmarkResult,
                     problems);
+
+            ConstraintStreamImplType implType = solverBenchmarkConfig.getSolverConfig()
+                    .getScoreDirectorFactoryConfig().getConstraintStreamImplType();
+            if (implType != null) {
+                plannerBenchmarkResult.setConstraintStreamImplType(
+                        implType.toString());
+            }
         }
 
         BenchmarkReportConfig benchmarkReportConfig_ =
@@ -99,6 +107,7 @@ public class DefaultPlannerBenchmarkFactory extends PlannerBenchmarkFactory {
                         : plannerBenchmarkConfig.getBenchmarkReportConfig();
         BenchmarkReport benchmarkReport =
                 new BenchmarkReportFactory(benchmarkReportConfig_).buildBenchmarkReport(plannerBenchmarkResult);
+
         return new DefaultPlannerBenchmark(plannerBenchmarkResult, plannerBenchmarkConfig.getBenchmarkDirectory(),
                 buildExecutorService(parallelBenchmarkCount), buildExecutorService(parallelBenchmarkCount), benchmarkReport);
     }
