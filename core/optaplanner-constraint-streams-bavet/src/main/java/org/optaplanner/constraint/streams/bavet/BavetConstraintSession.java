@@ -29,7 +29,7 @@ import org.optaplanner.core.api.score.Score;
 import org.optaplanner.core.api.score.constraint.ConstraintMatchTotal;
 import org.optaplanner.core.api.score.constraint.Indictment;
 
-final class BavetConstraintSession<Score_ extends Score<Score_>> {
+public final class BavetConstraintSession<Score_ extends Score<Score_>> {
 
     private final AbstractScoreInliner<Score_> scoreInliner;
     private final Map<Class<?>, ForEachUniNode<Object>> declaredClassToNodeMap;

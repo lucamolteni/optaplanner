@@ -22,11 +22,11 @@ package org.optaplanner.constraint.streams.common.inliner;
 import org.optaplanner.core.api.score.buildin.simple.SimpleScore;
 import org.optaplanner.core.api.score.stream.Constraint;
 
-final class SimpleScoreInliner extends AbstractScoreInliner<SimpleScore> {
+public class SimpleScoreInliner extends AbstractScoreInliner<SimpleScore> {
 
     private int score;
 
-    SimpleScoreInliner(boolean constraintMatchEnabled) {
+    public SimpleScoreInliner(boolean constraintMatchEnabled) {
         super(constraintMatchEnabled);
     }
 

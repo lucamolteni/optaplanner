@@ -34,8 +34,8 @@
     <!--<easyScoreCalculatorClass>org.optaplanner.examples.cloudbalancing.optional.score.CloudBalancingEasyScoreCalculator</easyScoreCalculatorClass>-->
     <!--<easyScoreCalculatorClass>org.optaplanner.examples.cloudbalancing.optional.score.CloudBalancingMapBasedEasyScoreCalculator</easyScoreCalculatorClass>-->
     <constraintProviderClass>org.optaplanner.examples.cloudbalancing.score.CloudBalancingConstraintProvider</constraintProviderClass>
-    <constraintStreamImplType>DROOLS</constraintStreamImplType>
-<!--            <constraintStreamImplType>BAVET</constraintStreamImplType>-->
+<!--    <constraintStreamImplType>DROOLS</constraintStreamImplType>-->
+            <constraintStreamImplType>BAVET</constraintStreamImplType>
 
     <!--<incrementalScoreCalculatorClass>org.optaplanner.examples.cloudbalancing.optional.score.CloudBalancingIncrementalScoreCalculator</incrementalScoreCalculatorClass>-->
     <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
