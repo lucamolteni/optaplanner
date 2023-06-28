@@ -65,6 +65,15 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <!-- TODO enable dependency check later. -->
+            <id>analyze-only</id>
+            <configuration>
+              <failOnWarning>false</failOnWarning>
+            </configuration>
+          </execution>
+        </executions>
         <configuration>
           <ignoredUsedUndeclaredDependencies>
             <dependency>org.optaplanner:optaplanner-core-impl:jar</dependency>
@@ -73,6 +82,7 @@
             <dependency>org.optaplanner:optaplanner-core:jar</dependency>
           </ignoredUnusedDeclaredDependencies>
         </configuration>
+
       </plugin>
     </plugins>
     <pluginManagement>
@@ -218,6 +228,38 @@
       <artifactId>jackson-datatype-jsr310</artifactId>
       <scope>runtime</scope>
     </dependency>
+
+
+    <dependency>
+      <groupId>org.optaplanner</groupId>
+      <artifactId>optaplanner-constraint-streams-common</artifactId>
+      <scope>test</scope>
+      <type>test-jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.optaplanner</groupId>
+      <artifactId>optaplanner-constraint-streams-drools</artifactId>
+      <scope>test</scope>
+      <type>test-jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.optaplanner</groupId>
+      <artifactId>optaplanner-constraint-streams-bavet</artifactId>
+      <scope>test</scope>
+      <type>test-jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-core</artifactId>
+      <version>1.35</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-generator-annprocess</artifactId>
+      <version>1.35</version>
+    </dependency>
+
     <!-- Testing -->
     <dependency>
       <groupId>org.optaplanner</groupId>

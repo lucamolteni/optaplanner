@@ -65,6 +65,8 @@ public final class DroolsConstraintStreamScoreDirectorFactory<Solution_, Score_ 
     private final KieBaseDescriptor<Solution_> kieBaseDescriptor;
     private final boolean droolsAlphaNetworkCompilationEnabled;
 
+    private KieSessionConfiguration kieSessionConfiguration;
+
     public DroolsConstraintStreamScoreDirectorFactory(SolutionDescriptor<Solution_> solutionDescriptor,
             ConstraintProvider constraintProvider, boolean droolsAlphaNetworkCompilationEnabled) {
         this(solutionDescriptor,
@@ -124,7 +126,10 @@ public final class DroolsConstraintStreamScoreDirectorFactory<Solution_, Score_ 
                 .stream()
                 .collect(toMap(Function.identity(), constraint -> constraint.extractConstraintWeight(workingSolution)));
         // Create the session itself.
-        KieSession kieSession = buildKieSessionFromKieBase(kieBaseDescriptor.get());
+        if (kieSessionConfiguration == null) {
+            kieSessionConfiguration = getKieSessionConfiguration();
+        }
+        KieSession kieSession = buildKieSessionFromKieBase(kieSessionConfiguration, kieBaseDescriptor.get());
         ((RuleEventManager) kieSession).addEventListener(new OptaPlannerRuleEventListener()); // Enables undo in rules.
         // Build and set the impacters for each constraint; this locks in the constraint weights.
         ScoreDefinition<Score_> scoreDefinition = solutionDescriptor.getScoreDefinition();
@@ -152,10 +157,14 @@ public final class DroolsConstraintStreamScoreDirectorFactory<Solution_, Score_ 
         return solutionDescriptor;
     }
 
-    private static KieSession buildKieSessionFromKieBase(KieBase kieBase) {
+    private static KieSession buildKieSessionFromKieBase(KieSessionConfiguration config, KieBase kieBase) {
+        return kieBase.newKieSession(config, null);
+    }
+
+    private static KieSessionConfiguration getKieSessionConfiguration() {
         KieSessionConfiguration config = KieServices.get().newKieSessionConfiguration();
         config.setOption(DirectFiringOption.YES); // For performance; not applicable to DRL due to insertLogical etc.
-        return kieBase.newKieSession(config, null);
+        return config;
     }
 
     @Override
