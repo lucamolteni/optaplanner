@@ -21,7 +21,7 @@
 <plannerBenchmark xmlns="https://www.optaplanner.org/xsd/benchmark" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://www.optaplanner.org/xsd/benchmark https://www.optaplanner.org/xsd/benchmark/benchmark.xsd">
   <benchmarkDirectory>local/data/cloudbalancing</benchmarkDirectory>
-  <parallelBenchmarkCount>AUTO</parallelBenchmarkCount>
+  <parallelBenchmarkCount>4</parallelBenchmarkCount>
 
   <inheritedSolverBenchmark>
     <solver>
@@ -59,7 +59,7 @@
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/18computers-54processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/19computers-57processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/20computers-60processes..json</inputSolutionFile>-->
-<!--      <inputSolutionFile>data/cloudbalancing/unsolved/100computers-300processes.json</inputSolutionFile>-->
+      <inputSolutionFile>data/cloudbalancing/unsolved/100computers-300processes.json</inputSolutionFile>
 <!--      <inputSolutionFile>data/cloudbalancing/unsolved/200computers-600processes.json</inputSolutionFile>-->
 <!--      <inputSolutionFile>data/cloudbalancing/unsolved/400computers-1200processes.json</inputSolutionFile>-->
 <!--      <inputSolutionFile>data/cloudbalancing/unsolved/800computers-2400processes.json</inputSolutionFile>-->
