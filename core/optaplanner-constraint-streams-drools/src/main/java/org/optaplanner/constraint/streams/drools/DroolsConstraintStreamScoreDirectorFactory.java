@@ -33,6 +33,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 
 import org.drools.ancompiler.KieBaseUpdaterANC;
+import org.drools.core.RuleSessionConfiguration;
+import org.drools.core.common.InternalAgenda;
 import org.drools.model.Global;
 import org.drools.model.Model;
 import org.drools.model.impl.ModelImpl;
@@ -45,6 +47,7 @@ import org.kie.api.definition.rule.Rule;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.KieSessionConfiguration;
 import org.kie.api.runtime.conf.DirectFiringOption;
+import org.kie.api.runtime.conf.ThreadSafeOption;
 import org.kie.api.runtime.rule.AgendaFilter;
 import org.kie.api.runtime.rule.Match;
 import org.kie.internal.builder.conf.PropertySpecificOption;
@@ -128,8 +131,12 @@ public final class DroolsConstraintStreamScoreDirectorFactory<Solution_, Score_ 
         // Create the session itself.
         if (kieSessionConfiguration == null) {
             kieSessionConfiguration = getKieSessionConfiguration();
+            kieSessionConfiguration.setOption(ThreadSafeOption.NO);
         }
         KieSession kieSession = buildKieSessionFromKieBase(kieSessionConfiguration, kieBaseDescriptor.get());
+        RuleSessionConfiguration ruleSessionConfiguration =
+                ((InternalAgenda) kieSession.getAgenda()).getWorkingMemory().getRuleSessionConfiguration();
+        System.out.println("++++++ isThreadSafe: " + ruleSessionConfiguration.isThreadSafe());
         ((RuleEventManager) kieSession).addEventListener(new OptaPlannerRuleEventListener()); // Enables undo in rules.
         // Build and set the impacters for each constraint; this locks in the constraint weights.
         ScoreDefinition<Score_> scoreDefinition = solutionDescriptor.getScoreDefinition();

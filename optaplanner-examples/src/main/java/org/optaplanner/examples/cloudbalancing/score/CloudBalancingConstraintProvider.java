@@ -27,7 +27,6 @@ import java.util.function.Function;
 import java.util.function.ToIntBiFunction;
 import java.util.function.ToIntFunction;
 
-import org.apache.commons.collections4.Get;
 import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
 import org.optaplanner.core.api.score.stream.Constraint;
 import org.optaplanner.core.api.score.stream.ConstraintFactory;
@@ -39,7 +38,7 @@ public class CloudBalancingConstraintProvider implements ConstraintProvider {
 
     @Override
     public Constraint[] defineConstraints(ConstraintFactory constraintFactory) {
-        return new Constraint[]{
+        return new Constraint[] {
                 requiredCpuPowerTotal(constraintFactory),
                 requiredMemoryTotal(constraintFactory),
                 requiredNetworkBandwidthTotal(constraintFactory),
@@ -56,7 +55,7 @@ public class CloudBalancingConstraintProvider implements ConstraintProvider {
                 .groupBy(getComputer, sum(fieldbyCPU))
                 .filter(byCPU)
                 .penalize(HardSoftScore.ONE_HARD,
-                          penalizebyCPU)
+                        penalizebyCPU)
                 .asConstraint("requiredCpuPowerTotal");
     }
 
@@ -65,7 +64,7 @@ public class CloudBalancingConstraintProvider implements ConstraintProvider {
                 .groupBy(getComputer, sum(fieldbyMemory))
                 .filter(byMemory)
                 .penalize(HardSoftScore.ONE_HARD,
-                          penalizebyMemory)
+                        penalizebyMemory)
                 .asConstraint("requiredMemoryTotal");
     }
 
@@ -74,7 +73,7 @@ public class CloudBalancingConstraintProvider implements ConstraintProvider {
                 .groupBy(getComputer, sum(fieldbyNetwork))
                 .filter(byNetwork)
                 .penalize(HardSoftScore.ONE_HARD,
-                          penalizebyNetwork)
+                        penalizebyNetwork)
                 .asConstraint("requiredNetworkBandwidthTotal");
     }
 

@@ -34,6 +34,7 @@
 
   <properties>
     <version.org.optaplanner>${project.version}</version.org.optaplanner>
+    <version.jmh>1.35</version.jmh>
   </properties>
 
   <name>OptaPlanner BOM (Bill Of Materials)</name>
@@ -515,6 +516,17 @@
         <artifactId>optaplanner-operator</artifactId>
         <type>test-jar</type>
         <version>${version.org.optaplanner}</version>
+      </dependency>
+      <!-- JMH -->
+      <dependency>
+        <groupId>org.openjdk.jmh</groupId>
+        <artifactId>jmh-core</artifactId>
+        <version>${version.jmh}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.openjdk.jmh</groupId>
+        <artifactId>jmh-generator-annprocess</artifactId>
+        <version>${version.jmh}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
