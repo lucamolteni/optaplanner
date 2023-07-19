@@ -34,14 +34,13 @@
         <initializingScoreTrend>ONLY_DOWN/ONLY_DOWN</initializingScoreTrend>
       </scoreDirectorFactory>
       <termination>
-        <secondsSpentLimit>10</secondsSpentLimit>
-<!--        <minutesSpentLimit>1</minutesSpentLimit>-->
+        <minutesSpentLimit>1</minutesSpentLimit>
       </termination>
     </solver>
     <problemBenchmarks>
       <solutionFileIOClass>org.optaplanner.examples.cloudbalancing.persistence.CloudBalanceSolutionFileIO</solutionFileIOClass>
-      <inputSolutionFile>data/cloudbalancing/unsolved/2computers-6processes.json</inputSolutionFile>
-      <inputSolutionFile>data/cloudbalancing/unsolved/3computers-9processes.json</inputSolutionFile>
+      <!--<inputSolutionFile>data/cloudbalancing/unsolved/2computers-6processes.json</inputSolutionFile>-->
+      <!--<inputSolutionFile>data/cloudbalancing/unsolved/3computers-9processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/4computers-12processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/5computers-15processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/6computers-18processes.json</inputSolutionFile>-->
@@ -59,11 +58,11 @@
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/18computers-54processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/19computers-57processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/20computers-60processes..json</inputSolutionFile>-->
-<!--      <inputSolutionFile>data/cloudbalancing/unsolved/100computers-300processes.json</inputSolutionFile>-->
-<!--      <inputSolutionFile>data/cloudbalancing/unsolved/200computers-600processes.json</inputSolutionFile>-->
-<!--      <inputSolutionFile>data/cloudbalancing/unsolved/400computers-1200processes.json</inputSolutionFile>-->
-<!--      <inputSolutionFile>data/cloudbalancing/unsolved/800computers-2400processes.json</inputSolutionFile>-->
-<!--      <inputSolutionFile>data/cloudbalancing/unsolved/1600computers-4800processes.json</inputSolutionFile>-->
+      <inputSolutionFile>data/cloudbalancing/unsolved/100computers-300processes.json</inputSolutionFile>
+      <inputSolutionFile>data/cloudbalancing/unsolved/200computers-600processes.json</inputSolutionFile>
+      <inputSolutionFile>data/cloudbalancing/unsolved/400computers-1200processes.json</inputSolutionFile>
+      <inputSolutionFile>data/cloudbalancing/unsolved/800computers-2400processes.json</inputSolutionFile>
+      <inputSolutionFile>data/cloudbalancing/unsolved/1600computers-4800processes.json</inputSolutionFile>
       <!--<problemStatisticType>BEST_SCORE</problemStatisticType>-->
       <!--<problemStatisticType>STEP_SCORE</problemStatisticType>-->
       <!--<problemStatisticType>SCORE_CALCULATION_SPEED</problemStatisticType>-->
