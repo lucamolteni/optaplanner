@@ -334,7 +334,7 @@ public final class ConstraintCollectors {
                 throw new IllegalStateException("Impossible state: the value (" + value +
                         ") is removed more times than it was added.");
             }
-            int valueCount = valueCountContainer2.intValue();
+            int valueCount = collectIntBody(valueCountContainer2);
             if (valueCount == 1) {
                 resultContainer.remove(value);
             } else {
@@ -386,7 +386,11 @@ public final class ConstraintCollectors {
                     int value = groupValueMapping.applyAsInt(a);
                     return innerSum(resultContainer, value);
                 },
-                MutableInt::intValue);
+                mutableInt -> collectIntBody(mutableInt));
+    }
+
+    private static int collectIntBody(MutableInt mutableInt) {
+        return mutableInt.intValue();
     }
 
     private static Runnable innerSum(MutableInt resultContainer, int value) {
