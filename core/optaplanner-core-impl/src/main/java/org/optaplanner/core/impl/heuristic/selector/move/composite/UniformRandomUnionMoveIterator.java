@@ -38,7 +38,7 @@ final class UniformRandomUnionMoveIterator<Solution_> extends SelectionIterator<
     public UniformRandomUnionMoveIterator(List<MoveSelector<Solution_>> childMoveSelectorList, Random workingRandom) {
         ArrayList<Iterator<Move<Solution_>>> list = new ArrayList<>();
 
-        Iterator iterator = null;
+        Iterator iterator;
         for (Object s : childMoveSelectorList) {
             if (s instanceof SwapMoveSelector) {
                 iterator = ((SwapMoveSelector) s).iterator();
@@ -47,17 +47,10 @@ final class UniformRandomUnionMoveIterator<Solution_> extends SelectionIterator<
             } else {
                 iterator = ((MoveSelector) s).iterator();
             }
+            if (iterator.hasNext()) {
+                list.add(iterator);
+            }
         }
-        if (iterator != null && iterator.hasNext()) {
-            list.add(iterator);
-        }
-
-        //        for (MoveSelector<Solution_> moves : childMoveSelectorList) {
-        //            Iterator<Move<Solution_>> iterator = moves.iterator();
-        //            if (iterator.hasNext()) {
-        //                list.add(iterator);
-        //            }
-        //        }
         this.moveIteratorList = list;
         this.workingRandom = workingRandom;
     }
