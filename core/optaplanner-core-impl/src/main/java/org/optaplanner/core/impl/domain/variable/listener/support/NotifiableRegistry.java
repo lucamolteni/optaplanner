@@ -81,11 +81,9 @@ final class NotifiableRegistry<Solution_> {
     }
 
     ArrayList<VariableListenerNotifiable<Solution_>> get(VariableDescriptor<?> variableDescriptor) {
-        ArrayList<VariableListenerNotifiable<Solution_>> orDefault =
-                (ArrayList<VariableListenerNotifiable<Solution_>>) sourceVariableToNotifiableMap.getOrDefault(
-                        variableDescriptor,
-                        Collections.emptyList());
-        return orDefault; // Avoids null for chained swap move on an unchained var.
+        return (ArrayList<VariableListenerNotifiable<Solution_>>) sourceVariableToNotifiableMap.getOrDefault(
+                variableDescriptor,
+                new ArrayList<>()); // Avoids null for chained swap move on an unchained var.
     }
 
     Collection<ListVariableListenerNotifiable<Solution_>> get(ListVariableDescriptor<?> variableDescriptor) {
