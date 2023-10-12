@@ -21,7 +21,7 @@
 <plannerBenchmark xmlns="https://www.optaplanner.org/xsd/benchmark" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="https://www.optaplanner.org/xsd/benchmark https://www.optaplanner.org/xsd/benchmark/benchmark.xsd">
   <benchmarkDirectory>local/data/cloudbalancing</benchmarkDirectory>
-  <parallelBenchmarkCount>AUTO</parallelBenchmarkCount>
+  <parallelBenchmarkCount>1</parallelBenchmarkCount>
 
   <inheritedSolverBenchmark>
     <solver>
@@ -32,20 +32,21 @@
         <initializingScoreTrend>ONLY_DOWN/ONLY_DOWN</initializingScoreTrend>
       </scoreDirectorFactory>
       <termination>
-        <minutesSpentLimit>5</minutesSpentLimit>
+        <minutesSpentLimit>1</minutesSpentLimit>
       </termination>
     </solver>
     <problemBenchmarks>
       <solutionFileIOClass>org.optaplanner.examples.cloudbalancing.persistence.CloudBalanceSolutionFileIO</solutionFileIOClass>
-      <!--<inputSolutionFile>data/cloudbalancing/unsolved/2computers-6processes.json</inputSolutionFile>-->
+      <writeOutputSolutionEnabled>true</writeOutputSolutionEnabled>
+            <inputSolutionFile>data/cloudbalancing/unsolved/2computers-6processes.json</inputSolutionFile>
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/3computers-9processes.json</inputSolutionFile>-->
-      <!--<inputSolutionFile>data/cloudbalancing/unsolved/4computers-12processes.json</inputSolutionFile>-->
+<!--      <inputSolutionFile>data/cloudbalancing/unsolved/4computers-12processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/5computers-15processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/6computers-18processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/7computers-21processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/8computers-24processes.json</inputSolutionFile>-->
-      <!--<inputSolutionFile>data/cloudbalancing/unsolved/9computers-27processes.json</inputSolutionFile>-->
-      <!--<inputSolutionFile>data/cloudbalancing/unsolved/10computers-30processes.json</inputSolutionFile>-->
+<!--      <inputSolutionFile>data/cloudbalancing/unsolved/9computers-27processes.json</inputSolutionFile>-->
+<!--      <inputSolutionFile>data/cloudbalancing/unsolved/10computers-30processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/11computers-33processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/12computers-36processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/13computers-39processes.json</inputSolutionFile>-->
@@ -56,11 +57,11 @@
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/18computers-54processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/19computers-57processes.json</inputSolutionFile>-->
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/20computers-60processes..json</inputSolutionFile>-->
-      <inputSolutionFile>data/cloudbalancing/unsolved/100computers-300processes.json</inputSolutionFile>
-      <inputSolutionFile>data/cloudbalancing/unsolved/200computers-600processes.json</inputSolutionFile>
-      <inputSolutionFile>data/cloudbalancing/unsolved/400computers-1200processes.json</inputSolutionFile>
-      <inputSolutionFile>data/cloudbalancing/unsolved/800computers-2400processes.json</inputSolutionFile>
-      <inputSolutionFile>data/cloudbalancing/unsolved/1600computers-4800processes.json</inputSolutionFile>
+<!--      <inputSolutionFile>data/cloudbalancing/unsolved/100computers-300processes.json</inputSolutionFile>-->
+<!--      <inputSolutionFile>data/cloudbalancing/unsolved/200computers-600processes.json</inputSolutionFile>-->
+<!--      <inputSolutionFile>data/cloudbalancing/unsolved/400computers-1200processes.json</inputSolutionFile>-->
+<!--      <inputSolutionFile>data/cloudbalancing/unsolved/800computers-2400processes.json</inputSolutionFile>-->
+<!--      <inputSolutionFile>data/cloudbalancing/unsolved/1600computers-4800processes.json</inputSolutionFile>-->
       <!--<problemStatisticType>BEST_SCORE</problemStatisticType>-->
       <!--<problemStatisticType>STEP_SCORE</problemStatisticType>-->
       <!--<problemStatisticType>SCORE_CALCULATION_SPEED</problemStatisticType>-->
