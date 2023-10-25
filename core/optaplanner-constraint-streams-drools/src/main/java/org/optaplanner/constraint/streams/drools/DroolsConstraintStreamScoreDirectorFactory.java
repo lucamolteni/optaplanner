@@ -136,7 +136,7 @@ public final class DroolsConstraintStreamScoreDirectorFactory<Solution_, Score_ 
         KieSession kieSession = buildKieSessionFromKieBase(kieSessionConfiguration, kieBaseDescriptor.get());
         RuleSessionConfiguration ruleSessionConfiguration =
                 ((InternalAgenda) kieSession.getAgenda()).getWorkingMemory().getRuleSessionConfiguration();
-        System.out.println("++++++ isThreadSafe: " + ruleSessionConfiguration.isThreadSafe());
+//        System.out.println("++++++ isThreadSafe: " + ruleSessionConfiguration.isThreadSafe());
         ((RuleEventManager) kieSession).addEventListener(new OptaPlannerRuleEventListener()); // Enables undo in rules.
         // Build and set the impacters for each constraint; this locks in the constraint weights.
         ScoreDefinition<Score_> scoreDefinition = solutionDescriptor.getScoreDefinition();
