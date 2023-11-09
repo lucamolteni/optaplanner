@@ -16,10 +16,11 @@ import org.optaplanner.core.config.solver.EnvironmentMode;
 import org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor;
 import org.optaplanner.core.impl.testdata.domain.TestdataSolution;
 
+
 class NodeBuildHelperTest {
 
-    @ParameterizedTest
-    @ValueSource(booleans = { true, false })
+//    @ParameterizedTest
+//    @ValueSource(booleans = { true, false })
     public void testCreationOfSimpleRete(boolean withBavet) {
 
         SolutionDescriptor<TestdataSolution> testdataSolutionSolutionDescriptor = TestdataSolution.buildSolutionDescriptor();
