@@ -2,8 +2,6 @@ package org.optaplanner.examples;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 import org.optaplanner.constraint.streams.bavet.BavetConstraintStreamScoreDirectorFactory;
 import org.optaplanner.constraint.streams.common.AbstractConstraintStreamScoreDirectorFactory;
 import org.optaplanner.constraint.streams.common.inliner.AbstractScoreInliner;
@@ -16,11 +14,10 @@ import org.optaplanner.core.config.solver.EnvironmentMode;
 import org.optaplanner.core.impl.domain.solution.descriptor.SolutionDescriptor;
 import org.optaplanner.core.impl.testdata.domain.TestdataSolution;
 
-
 class NodeBuildHelperTest {
 
-//    @ParameterizedTest
-//    @ValueSource(booleans = { true, false })
+    //    @ParameterizedTest
+    //    @ValueSource(booleans = { true, false })
     public void testCreationOfSimpleRete(boolean withBavet) {
 
         SolutionDescriptor<TestdataSolution> testdataSolutionSolutionDescriptor = TestdataSolution.buildSolutionDescriptor();
