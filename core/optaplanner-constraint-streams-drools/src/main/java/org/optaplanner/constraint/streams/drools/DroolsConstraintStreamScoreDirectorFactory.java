@@ -131,7 +131,7 @@ public final class DroolsConstraintStreamScoreDirectorFactory<Solution_, Score_ 
         // Create the session itself.
         if (kieSessionConfiguration == null) {
             kieSessionConfiguration = getKieSessionConfiguration();
-            kieSessionConfiguration.setOption(ThreadSafeOption.NO);
+//            kieSessionConfiguration.setOption(ThreadSafeOption.NO);
         }
         KieSession kieSession = buildKieSessionFromKieBase(kieSessionConfiguration, kieBaseDescriptor.get());
         RuleSessionConfiguration ruleSessionConfiguration =
