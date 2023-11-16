@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d9f74db-a1ce-4c7d-9c1b-743a61994cd1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/generated-test-sources/test-annotations/org/optaplanner/jmh_generated/ScoreMicroBenchmark_filter_problemFact_jmhTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/generated-test-sources/test-annotations/org/optaplanner/jmh_generated/ScoreMicroBenchmark_filter_problemFact_jmhTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/generated-test-sources/test-annotations/org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/generated-test-sources/test-annotations/org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/generated-test-sources/test-annotations/org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/generated-test-sources/test-annotations/org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/jmh_generated/ScoreMicroBenchmark_filter_problemFact_jmhTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/jmh_generated/ScoreMicroBenchmark_filter_problemFact_jmhTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B3.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2YGZwjRfzsY1NtPWf5gHGI5HD40" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "bench-playground5",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ScoreMicroBenchmark.*" type="jmh-id" temporary="true" program-parameters="org.optaplanner.ScoreMicroBenchmark.*" working-dir="$MODULE_WORKING_DIR$" benchmark-type="CLASS" benchmark-class="org.optaplanner.ScoreMicroBenchmark" isAlternativeJrePathEnabled="false">
+      <module name="optaplanner-micro-benchmark2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jmh.ScoreMicroBenchmark.*" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d9f74db-a1ce-4c7d-9c1b-743a61994cd1" name="Changes" comment="" />
+      <created>1700154116567</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700154116567</updated>
+    </task>
+    <servers />
+  </component>
+</project>

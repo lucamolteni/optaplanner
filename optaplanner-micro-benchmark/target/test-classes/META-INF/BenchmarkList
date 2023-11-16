@@ -1,0 +1,1 @@
+JMH S 35 org.optaplanner.ScoreMicroBenchmark S 76 org.optaplanner.jmh_generated.ScoreMicroBenchmark_filter_problemFact_jmhTest S 18 filter_problemFact S 10 Throughput E A 1 1 1 E I 2 10 T 6 400 ms E I 2 20 T 6 100 ms E I 1 4 E E E E E M 1 8 isDrools 2 16 0BgcAUHAlBA===== 16 mBQYAwGAzBQZAA== E E E 
