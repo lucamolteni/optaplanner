@@ -53,7 +53,7 @@ public final class DroolsConstraintStreamImplSupport
     public <Score_ extends Score<Score_>, Solution_> InnerScoreDirector<Solution_, Score_> buildScoreDirector(
             SolutionDescriptor<Solution_> solutionDescriptorSupplier, ConstraintProvider constraintProvider) {
         return (InnerScoreDirector<Solution_, Score_>) new DroolsConstraintStreamScoreDirectorFactory<>(
-                solutionDescriptorSupplier, constraintProvider, true)
+                solutionDescriptorSupplier, constraintProvider, false)
                 .buildScoreDirector(false, constraintMatchEnabled);
     }
 }

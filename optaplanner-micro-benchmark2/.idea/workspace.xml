@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d9f74db-a1ce-4c7d-9c1b-743a61994cd1" name="Changes" comment="" />
+    <list default="true" id="7d9f74db-a1ce-4c7d-9c1b-743a61994cd1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.run/ScoreMicroBenchmark.filter_problemFact$.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.run/ScoreMicroBenchmark.filter_problemFact$.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/src/test/java/org/optaplanner/DroolsConstraintStreamImplSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/src/test/java/org/optaplanner/DroolsConstraintStreamImplSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/src/test/java/org/optaplanner/ScoreMicroBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/src/test/java/org/optaplanner/ScoreMicroBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/BavetConstraintStreamImplSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/BavetConstraintStreamImplSupport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/DroolsConstraintStreamImplSupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/DroolsConstraintStreamImplSupport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/ScoreMicroBenchmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/../optaplanner-micro-benchmark/target/test-classes/org/optaplanner/ScoreMicroBenchmark.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

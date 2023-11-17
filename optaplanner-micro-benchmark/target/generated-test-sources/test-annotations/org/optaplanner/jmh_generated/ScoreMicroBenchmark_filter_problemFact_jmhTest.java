@@ -75,6 +75,7 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
+                l_scoremicrobenchmark0_0.setup();
                 l_scoremicrobenchmark0_0.filter_problemFact();
                 res.allOps++;
             }
@@ -85,6 +86,7 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
+                    l_scoremicrobenchmark0_0.setup();
                     l_scoremicrobenchmark0_0.filter_problemFact();
                     res.allOps++;
                 }
@@ -116,7 +118,10 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
+            l_scoremicrobenchmark0_0.setup();
+            long rt = System.nanoTime();
             l_scoremicrobenchmark0_0.filter_problemFact();
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -142,6 +147,7 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
+                l_scoremicrobenchmark0_0.setup();
                 l_scoremicrobenchmark0_0.filter_problemFact();
                 res.allOps++;
             }
@@ -152,6 +158,7 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
+                    l_scoremicrobenchmark0_0.setup();
                     l_scoremicrobenchmark0_0.filter_problemFact();
                     res.allOps++;
                 }
@@ -183,7 +190,10 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
         long realTime = 0;
         result.startTime = System.nanoTime();
         do {
+            l_scoremicrobenchmark0_0.setup();
+            long rt = System.nanoTime();
             l_scoremicrobenchmark0_0.filter_problemFact();
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         result.stopTime = System.nanoTime();
@@ -209,6 +219,7 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
 
             control.announceWarmupReady();
             while (control.warmupShouldWait) {
+                l_scoremicrobenchmark0_0.setup();
                 l_scoremicrobenchmark0_0.filter_problemFact();
                 res.allOps++;
             }
@@ -223,6 +234,7 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
             control.announceWarmdownReady();
             try {
                 while (control.warmdownShouldWait) {
+                    l_scoremicrobenchmark0_0.setup();
                     l_scoremicrobenchmark0_0.filter_problemFact();
                     res.allOps++;
                 }
@@ -254,6 +266,8 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
         long time = 0;
         int currentStride = 0;
         do {
+            l_scoremicrobenchmark0_0.setup();
+            long rt = System.nanoTime();
             rnd = (rnd * 1664525 + 1013904223);
             boolean sample = (rnd & rndMask) == 0;
             if (sample) {
@@ -271,6 +285,7 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
                     rndMask = (rndMask << 1) + 1;
                 }
             }
+            realTime += (System.nanoTime() - rt);
             operations++;
         } while(!control.isDone);
         startRndMask = Math.max(startRndMask, rndMask);
@@ -317,7 +332,10 @@ public final class ScoreMicroBenchmark_filter_problemFact_jmhTest {
         result.startTime = System.nanoTime();
         for (int b = 0; b < batchSize; b++) {
             if (control.volatileSpoiler) return;
+            l_scoremicrobenchmark0_0.setup();
+            long rt = System.nanoTime();
             l_scoremicrobenchmark0_0.filter_problemFact();
+            realTime += (System.nanoTime() - rt);
         }
         result.stopTime = System.nanoTime();
         result.realTime = realTime;
