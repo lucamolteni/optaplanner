@@ -1,0 +1,111 @@
+
+:summaryTableId: quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config
+[.configuration-legend]
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
+[.configuration-reference, cols="80,.^10,.^10"]
+|===
+
+h|[[quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_configuration]]link:#quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_configuration[Configuration property]
+
+h|Type
+h|Default
+
+a|icon:lock[title=Fixed at build time] [[quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver-config-xml]]`link:#quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver-config-xml[quarkus.optaplanner.solver-config-xml]`
+
+[.description]
+--
+A classpath resource to read the solver configuration XML. Defaults to `DEFAULT_SOLVER_CONFIG_URL`. If this property isn't specified, that solverConfig.xml is optional.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_SOLVER_CONFIG_XML+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_SOLVER_CONFIG_XML+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.score-drl]]`link:#quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.score-drl[quarkus.optaplanner.score-drl]`
+
+[.description]
+--
+A classpath resource to read the solver score DRL. Defaults to "`default_constraints_drl_url`". Do not define this property when a `ConstraintProvider`, `EasyScoreCalculator` or `IncrementalScoreCalculator` class exists.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_SCORE_DRL+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_SCORE_DRL+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver.environment-mode]]`link:#quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver.environment-mode[quarkus.optaplanner.solver.environment-mode]`
+
+[.description]
+--
+Enable runtime assertions to detect common bugs in your implementation during development. Defaults to `EnvironmentMode++#++REPRODUCIBLE`.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_SOLVER_ENVIRONMENT_MODE+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_SOLVER_ENVIRONMENT_MODE+++`
+endif::add-copy-button-to-env-var[]
+-- a|
+`full-assert`, `non-intrusive-full-assert`, `fast-assert`, `reproducible`, `non-reproducible` 
+|
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver.daemon]]`link:#quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver.daemon[quarkus.optaplanner.solver.daemon]`
+
+[.description]
+--
+Enable daemon mode. In daemon mode, non-early termination pauses the solver instead of stopping it, until the next problem fact change arrives. This is often useful for real-time planning. Defaults to "false".
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_SOLVER_DAEMON+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_SOLVER_DAEMON+++`
+endif::add-copy-button-to-env-var[]
+--|boolean 
+|
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver.domain-access-type]]`link:#quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver.domain-access-type[quarkus.optaplanner.solver.domain-access-type]`
+
+[.description]
+--
+Determines how to access the fields and methods of domain classes. Defaults to `DomainAccessType++#++GIZMO`.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_SOLVER_DOMAIN_ACCESS_TYPE+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_SOLVER_DOMAIN_ACCESS_TYPE+++`
+endif::add-copy-button-to-env-var[]
+-- a|
+`reflection`, `gizmo` 
+|
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver.constraint-stream-impl-type]]`link:#quarkus-optaplanner-org-optaplanner-quarkus-deployment-config-opta-planner-build-time-config_quarkus.optaplanner.solver.constraint-stream-impl-type[quarkus.optaplanner.solver.constraint-stream-impl-type]`
+
+[.description]
+--
+What constraint stream implementation to use. Defaults to `ConstraintStreamImplType++#++DROOLS`.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_SOLVER_CONSTRAINT_STREAM_IMPL_TYPE+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_SOLVER_CONSTRAINT_STREAM_IMPL_TYPE+++`
+endif::add-copy-button-to-env-var[]
+-- a|
+`bavet`, `drools` 
+|
+
+|===

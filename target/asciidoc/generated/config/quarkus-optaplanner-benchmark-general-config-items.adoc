@@ -1,0 +1,75 @@
+
+:summaryTableId: quarkus-optaplanner-benchmark-general-config-items
+[.configuration-legend]
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
+[.configuration-reference, cols="80,.^10,.^10"]
+|===
+
+h|[[quarkus-optaplanner-benchmark-general-config-items_configuration]]link:#quarkus-optaplanner-benchmark-general-config-items_configuration[Configuration property]
+
+h|Type
+h|Default
+
+a| [[quarkus-optaplanner-benchmark-general-config-items_quarkus.optaplanner.benchmark.solver.termination.spent-limit]]`link:#quarkus-optaplanner-benchmark-general-config-items_quarkus.optaplanner.benchmark.solver.termination.spent-limit[quarkus.optaplanner.benchmark.solver.termination.spent-limit]`
+
+[.description]
+--
+How long the solver can run. For example: "30s" is 30 seconds. "5m" is 5 minutes. "2h" is 2 hours. "1d" is 1 day. Also supports ISO-8601 format, see `Duration`.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_BENCHMARK_SOLVER_TERMINATION_SPENT_LIMIT+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_BENCHMARK_SOLVER_TERMINATION_SPENT_LIMIT+++`
+endif::add-copy-button-to-env-var[]
+--|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+  link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
+|
+
+
+a| [[quarkus-optaplanner-benchmark-general-config-items_quarkus.optaplanner.benchmark.solver.termination.unimproved-spent-limit]]`link:#quarkus-optaplanner-benchmark-general-config-items_quarkus.optaplanner.benchmark.solver.termination.unimproved-spent-limit[quarkus.optaplanner.benchmark.solver.termination.unimproved-spent-limit]`
+
+[.description]
+--
+How long the solver can run without finding a new best solution after finding a new best solution. For example: "30s" is 30 seconds. "5m" is 5 minutes. "2h" is 2 hours. "1d" is 1 day. Also supports ISO-8601 format, see `Duration`.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_BENCHMARK_SOLVER_TERMINATION_UNIMPROVED_SPENT_LIMIT+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_BENCHMARK_SOLVER_TERMINATION_UNIMPROVED_SPENT_LIMIT+++`
+endif::add-copy-button-to-env-var[]
+--|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+  link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
+|
+
+
+a| [[quarkus-optaplanner-benchmark-general-config-items_quarkus.optaplanner.benchmark.solver.termination.best-score-limit]]`link:#quarkus-optaplanner-benchmark-general-config-items_quarkus.optaplanner.benchmark.solver.termination.best-score-limit[quarkus.optaplanner.benchmark.solver.termination.best-score-limit]`
+
+[.description]
+--
+Terminates the solver when a specific or higher score has been reached. For example: "0hard/-1000soft" terminates when the best score changes from "0hard/-1200soft" to "0hard/-900soft". Wildcards are supported to replace numbers. For example: "0hard/++*++soft" to terminate when any feasible score is reached.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_BENCHMARK_SOLVER_TERMINATION_BEST_SCORE_LIMIT+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_BENCHMARK_SOLVER_TERMINATION_BEST_SCORE_LIMIT+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+|===
+ifndef::no-duration-note[]
+[NOTE]
+[id='duration-note-anchor-{summaryTableId}']
+.About the Duration format
+====
+The format for durations uses the standard `java.time.Duration` format.
+You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-[Duration#parse() javadoc].
+
+You can also provide duration values starting with a number.
+In this case, if the value consists only of a number, the converter treats the value as seconds.
+Otherwise, `PT` is implicitly prepended to the value to obtain a standard `java.time.Duration` format.
+====
+endif::no-duration-note[]

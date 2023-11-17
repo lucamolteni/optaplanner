@@ -1,0 +1,28 @@
+
+:summaryTableId: quarkus-optaplanner-benchmark-org-optaplanner-benchmark-quarkus-deployment-opta-planner-benchmark-build-time-config
+[.configuration-legend]
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
+[.configuration-reference, cols="80,.^10,.^10"]
+|===
+
+h|[[quarkus-optaplanner-benchmark-org-optaplanner-benchmark-quarkus-deployment-opta-planner-benchmark-build-time-config_configuration]]link:#quarkus-optaplanner-benchmark-org-optaplanner-benchmark-quarkus-deployment-opta-planner-benchmark-build-time-config_configuration[Configuration property]
+
+h|Type
+h|Default
+
+a|icon:lock[title=Fixed at build time] [[quarkus-optaplanner-benchmark-org-optaplanner-benchmark-quarkus-deployment-opta-planner-benchmark-build-time-config_quarkus.optaplanner.benchmark.solver-benchmark-config-xml]]`link:#quarkus-optaplanner-benchmark-org-optaplanner-benchmark-quarkus-deployment-opta-planner-benchmark-build-time-config_quarkus.optaplanner.benchmark.solver-benchmark-config-xml[quarkus.optaplanner.benchmark.solver-benchmark-config-xml]`
+
+[.description]
+--
+A classpath resource to read the benchmark configuration XML. Defaults to `DEFAULT_SOLVER_BENCHMARK_CONFIG_URL`. If this property isn't specified, that solverBenchmarkConfig.xml is optional.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_OPTAPLANNER_BENCHMARK_SOLVER_BENCHMARK_CONFIG_XML+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_OPTAPLANNER_BENCHMARK_SOLVER_BENCHMARK_CONFIG_XML+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+|===

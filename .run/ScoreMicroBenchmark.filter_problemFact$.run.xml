@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ScoreMicroBenchmark.filter_problemFact$" type="jmh-id" vm-parameters="" program-parameters="-prof &quot;async:output=flamegraph;dir=/tmp;libPath=$USER_HOME$/async-profiler/build/libasyncProfiler.so&quot; org.optaplanner.ScoreMicroBenchmark.filter_problemFact$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.optaplanner.ScoreMicroBenchmark" isAlternativeJrePathEnabled="false">
+    <module name="optaplanner-micro-benchmark" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

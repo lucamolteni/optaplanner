@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CloudBalancingBenchmarkApp - Agent" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="org.optaplanner.examples.cloudbalancing.optional.benchmark.CloudBalancingBenchmarkApp" />
+    <module name="optaplanner-examples" />
+    <option name="VM_PARAMETERS" value="-Dlogback.level.org.optaplanner=info -XX:+UnlockDiagnosticVMOptions -XX:+DebugNonSafepoints -Xmx2G -server -Dagent.net.bytebuddy.experimental=true -javaagent:$PROJECT_DIR$/../type-pollution-agent/agent/target/type-pollution-agent-0.1-SNAPSHOT.jar" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/optaplanner-examples" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

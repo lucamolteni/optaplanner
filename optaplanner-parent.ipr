@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<project version="4" relativePaths="false"> 
+  <component name="ProjectRootManager" version="2" assert-keyword="true" project-jdk-name="19." jdk-15="true"/>  
+  <component name="CodeStyleManager"> 
+    <option name="USE_DEFAULT_CODE_STYLE_SCHEME" value="true"/>  
+    <option name="CODE_STYLE_SCHEME" value=""/> 
+  </component>  
+  <component name="libraryTable"/>  
+  <component name="CompilerConfiguration"> 
+    <option name="DEFAULT_COMPILER" value="Javac"/>  
+    <option name="CLEAR_OUTPUT_DIRECTORY" value="false"/>  
+    <!--
+    <wildcardResourcePatterns>
+      <entry name="${wildcardResourcePattern}"/>
+    </wildcardResourcePatterns>
+    -->  
+    <wildcardResourcePatterns>
+      <entry name="!?*.java"/>
+    </wildcardResourcePatterns>
+  </component>  
+  <component name="JavacSettings"> 
+    <option name="DEBUGGING_INFO" value="true"/>  
+    <option name="GENERATE_NO_WARNINGS" value="false"/>  
+    <option name="DEPRECATION" value="true"/>  
+    <option name="ADDITIONAL_OPTIONS_STRING" value=""/>  
+    <option name="MAXIMUM_HEAP_SIZE" value="128"/>  
+    <option name="USE_GENERICS_COMPILER" value="false"/> 
+  </component>  
+  <component name="JikesSettings"> 
+    <option name="DEBUGGING_INFO" value="true"/>  
+    <option name="DEPRECATION" value="true"/>  
+    <option name="GENERATE_NO_WARNINGS" value="false"/>  
+    <option name="GENERATE_MAKE_FILE_DEPENDENCIES" value="false"/>  
+    <option name="DO_FULL_DEPENDENCE_CHECK" value="false"/>  
+    <option name="IS_INCREMENTAL_MODE" value="false"/>  
+    <option name="IS_EMACS_ERRORS_MODE" value="true"/>  
+    <option name="ADDITIONAL_OPTIONS_STRING" value=""/>  
+    <option name="MAXIMUM_HEAP_SIZE" value="128"/> 
+  </component>  
+  <component name="AntConfiguration"> 
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false"/>  
+    <option name="FILTER_TARGETS" value="false"/> 
+  </component>  
+  <component name="JavadocGenerationManager"> 
+    <option name="OUTPUT_DIRECTORY"/>  
+    <option name="OPTION_SCOPE" value="protected"/>  
+    <option name="OPTION_HIERARCHY" value="false"/>  
+    <option name="OPTION_NAVIGATOR" value="false"/>  
+    <option name="OPTION_INDEX" value="false"/>  
+    <option name="OPTION_SEPARATE_INDEX" value="false"/>  
+    <option name="OPTION_USE_1_1" value="false"/>  
+    <option name="OPTION_DOCUMENT_TAG_USE" value="false"/>  
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false"/>  
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false"/>  
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="false"/>  
+    <option name="OPTION_DEPRECATED_LIST" value="false"/>  
+    <option name="OTHER_OPTIONS"/>  
+    <option name="HEAP_SIZE"/>  
+    <option name="OPEN_IN_BROWSER" value="false"/> 
+  </component>  
+  <component name="JUnitProjectSettings"> 
+    <option name="TEST_RUNNER" value="UI"/> 
+  </component>  
+  <component name="EntryPointsManager"> 
+    <entry_points/> 
+  </component>  
+  <component name="DataSourceManager"/>  
+  <component name="ExportToHTMLSettings"> 
+    <option name="PRINT_LINE_NUMBERS" value="false"/>  
+    <option name="OPEN_IN_BROWSER" value="false"/>  
+    <option name="OUTPUT_DIRECTORY"/> 
+  </component>  
+  <component name="ImportConfiguration"> 
+    <option name="VENDOR"/>  
+    <option name="RELEASE_TAG"/>  
+    <option name="LOG_MESSAGE"/>  
+    <option name="CHECKOUT_AFTER_IMPORT" value="true"/> 
+  </component>  
+  <component name="ProjectModuleManager"> 
+    <modules> 
+      <!-- module filepath="$$PROJECT_DIR$$/${pom.artifactId}.iml"/ -->  
+      <module filepath="$PROJECT_DIR$/optaplanner-parent.iml"/>
+      <module filepath="$PROJECT_DIR$/build/optaplanner-bom/optaplanner-bom.iml"/>
+      <module filepath="$PROJECT_DIR$/build/optaplanner-ide-config/optaplanner-ide-config.iml"/>
+      <module filepath="$PROJECT_DIR$/build/optaplanner-build-parent/optaplanner-build-parent.iml"/>
+      <module filepath="$PROJECT_DIR$/core/optaplanner-core/optaplanner-core.iml"/>
+      <module filepath="$PROJECT_DIR$/core/optaplanner-core-impl/optaplanner-core-impl.iml"/>
+      <module filepath="$PROJECT_DIR$/core/optaplanner-constraint-streams-common/optaplanner-constraint-streams-common.iml"/>
+      <module filepath="$PROJECT_DIR$/core/optaplanner-constraint-streams-drools/optaplanner-constraint-streams-drools.iml"/>
+      <module filepath="$PROJECT_DIR$/core/optaplanner-constraint-drl/optaplanner-constraint-drl.iml"/>
+      <module filepath="$PROJECT_DIR$/core/optaplanner-constraint-streams-bavet/optaplanner-constraint-streams-bavet.iml"/>
+      <module filepath="$PROJECT_DIR$/core/optaplanner-core-parent.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-persistence/optaplanner-persistence-common/optaplanner-persistence-common.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-persistence/optaplanner-persistence-xstream/optaplanner-persistence-xstream.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-persistence/optaplanner-persistence-jaxb/optaplanner-persistence-jaxb.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-persistence/optaplanner-persistence-jackson/optaplanner-persistence-jackson.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-persistence/optaplanner-persistence-jpa/optaplanner-persistence-jpa.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-persistence/optaplanner-persistence-jsonb/optaplanner-persistence-jsonb.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-persistence/optaplanner-persistence.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-benchmark/optaplanner-benchmark.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-test/optaplanner-test.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-spring-integration/optaplanner-spring-boot-autoconfigure/optaplanner-spring-boot-autoconfigure.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-spring-integration/optaplanner-spring-boot-starter/optaplanner-spring-boot-starter.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-spring-integration/optaplanner-spring-integration.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus/runtime/optaplanner-quarkus.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus/deployment/optaplanner-quarkus-deployment.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus/integration-test/optaplanner-quarkus-integration-test.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus/reflection-integration-test/optaplanner-quarkus-reflection-integration-test.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus/devui-integration-test/optaplanner-quarkus-devui-integration-test.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus/drl-integration-test/optaplanner-quarkus-drl-integration-test.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus/optaplanner-quarkus-parent.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-benchmark/runtime/optaplanner-quarkus-benchmark.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-benchmark/deployment/optaplanner-quarkus-benchmark-deployment.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-benchmark/integration-test/optaplanner-quarkus-benchmark-integration-test.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-benchmark/optaplanner-quarkus-benchmark-parent.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-jackson/runtime/optaplanner-quarkus-jackson.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-jackson/deployment/optaplanner-quarkus-jackson-deployment.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-jackson/integration-test/optaplanner-quarkus-jackson-integration-test.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-jackson/optaplanner-quarkus-jackson-parent.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-jsonb/runtime/optaplanner-quarkus-jsonb.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-jsonb/deployment/optaplanner-quarkus-jsonb-deployment.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-jsonb/integration-test/optaplanner-quarkus-jsonb-integration-test.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-jsonb/optaplanner-quarkus-jsonb-parent.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-quarkus-integration/optaplanner-quarkus-integration.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-migration/optaplanner-migration.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-examples/optaplanner-examples.iml"/>
+      <module filepath="$PROJECT_DIR$/optaplanner-operator/optaplanner-operator.iml"/>
+    </modules> 
+  </component>  
+  <UsedPathMacros> 
+    <!--<macro name="cargo"></macro>--> 
+  </UsedPathMacros> 
+</project>
