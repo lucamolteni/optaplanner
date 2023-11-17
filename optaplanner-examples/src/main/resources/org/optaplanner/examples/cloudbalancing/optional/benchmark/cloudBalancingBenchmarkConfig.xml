@@ -29,18 +29,18 @@
       <entityClass>org.optaplanner.examples.cloudbalancing.domain.CloudProcess</entityClass>
       <scoreDirectorFactory>
         <constraintProviderClass>org.optaplanner.examples.cloudbalancing.score.CloudBalancingConstraintProvider</constraintProviderClass>
-<!--        <constraintStreamImplType>DROOLS</constraintStreamImplType>-->
-        <constraintStreamImplType>BAVET</constraintStreamImplType>
+        <constraintStreamImplType>DROOLS</constraintStreamImplType>
+<!--        <constraintStreamImplType>BAVET</constraintStreamImplType>-->
         <initializingScoreTrend>ONLY_DOWN/ONLY_DOWN</initializingScoreTrend>
       </scoreDirectorFactory>
       <termination>
-        <minutesSpentLimit>1</minutesSpentLimit>
-<!--        <secondsSpentLimit>10</secondsSpentLimit>-->
+<!--        <minutesSpentLimit>1</minutesSpentLimit>-->
+        <secondsSpentLimit>10</secondsSpentLimit>
       </termination>
     </solver>
     <problemBenchmarks>
       <solutionFileIOClass>org.optaplanner.examples.cloudbalancing.persistence.CloudBalanceSolutionFileIO</solutionFileIOClass>
-      <writeOutputSolutionEnabled>true</writeOutputSolutionEnabled>
+<!--      <writeOutputSolutionEnabled>false</writeOutputSolutionEnabled>-->
             <inputSolutionFile>data/cloudbalancing/unsolved/2computers-6processes.json</inputSolutionFile>
       <!--<inputSolutionFile>data/cloudbalancing/unsolved/3computers-9processes.json</inputSolutionFile>-->
 <!--      <inputSolutionFile>data/cloudbalancing/unsolved/4computers-12processes.json</inputSolutionFile>-->
