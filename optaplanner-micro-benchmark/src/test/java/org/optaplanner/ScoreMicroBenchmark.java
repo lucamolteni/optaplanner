@@ -24,7 +24,12 @@ public class ScoreMicroBenchmark extends AbstractConstraintStreamTest {
     @Param({ "true", "false" })
     boolean isDrools;
 
-    public ScoreMicroBenchmark() {
+    @Benchmark
+    @Fork(value = 4)
+    @BenchmarkMode(Mode.Throughput)
+    @Warmup(iterations = 10, time = 400, timeUnit = TimeUnit.MILLISECONDS)
+    @Measurement(iterations = 20, time = 100, timeUnit = TimeUnit.MILLISECONDS)
+    public void filter_problemFact() {
         ConstraintStreamImplSupport constraintStreamImplSupport;
         if (isDrools) {
             constraintStreamImplSupport = new DroolsConstraintStreamImplSupport(true);
@@ -32,14 +37,7 @@ public class ScoreMicroBenchmark extends AbstractConstraintStreamTest {
             constraintStreamImplSupport = new BavetConstraintStreamImplSupport(true);
         }
         this.implSupport = constraintStreamImplSupport;
-    }
 
-    @Benchmark
-    @Fork(value = 4)
-    @BenchmarkMode(Mode.Throughput)
-    @Warmup(iterations = 10, time = 400, timeUnit = TimeUnit.MILLISECONDS)
-    @Measurement(iterations = 20, time = 100, timeUnit = TimeUnit.MILLISECONDS)
-    public void filter_problemFact() {
         TestdataLavishSolution solution = TestdataLavishSolution.generateSolution();
         TestdataLavishValueGroup valueGroup1 = new TestdataLavishValueGroup("MyValueGroup 1");
         solution.getValueGroupList().add(valueGroup1);
