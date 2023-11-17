@@ -1,3 +1,10 @@
+META-INF/CompilerHints
+org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B3.class
 org/optaplanner/ScoreMicroBenchmark.class
+META-INF/BenchmarkList
+org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType.class
+org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B2.class
+org/optaplanner/jmh_generated/ScoreMicroBenchmark_filter_problemFact_jmhTest.class
 org/optaplanner/BavetConstraintStreamImplSupport.class
 org/optaplanner/DroolsConstraintStreamImplSupport.class
+org/optaplanner/jmh_generated/ScoreMicroBenchmark_jmhType_B1.class
