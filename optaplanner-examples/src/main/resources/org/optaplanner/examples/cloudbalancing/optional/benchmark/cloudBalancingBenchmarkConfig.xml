@@ -29,6 +29,8 @@
       <entityClass>org.optaplanner.examples.cloudbalancing.domain.CloudProcess</entityClass>
       <scoreDirectorFactory>
         <constraintProviderClass>org.optaplanner.examples.cloudbalancing.score.CloudBalancingConstraintProvider</constraintProviderClass>
+        <constraintStreamImplType>DROOLS</constraintStreamImplType>
+<!--        <constraintStreamImplType>BAVET</constraintStreamImplType>-->
         <initializingScoreTrend>ONLY_DOWN/ONLY_DOWN</initializingScoreTrend>
       </scoreDirectorFactory>
       <termination>
