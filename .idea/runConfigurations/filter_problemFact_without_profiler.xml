@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="filter_problemFact without profiler" type="jmh-id" vm-parameters="" program-parameters="org.optaplanner.ScoreMicroBenchmark.filter_problemFact$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.optaplanner.ScoreMicroBenchmark" isAlternativeJrePathEnabled="false">
+    <module name="optaplanner-micro-benchmark" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

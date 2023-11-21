@@ -29,7 +29,7 @@ public class ScoreMicroBenchmark extends AbstractConstraintStreamTest {
     private TestdataLavishValueGroup valueGroup1;
     private TestdataLavishValueGroup valueGroup2;
 
-    @Setup(Level.Invocation)
+    @Setup(Level.Trial)
     public void setup() {
         ConstraintStreamImplSupport constraintStreamImplSupport;
         if (isDrools) {
@@ -63,13 +63,6 @@ public class ScoreMicroBenchmark extends AbstractConstraintStreamTest {
 
         assertScore(scoreDirector,
                 assertMatch(valueGroup1),
-                assertMatch(valueGroup2));
-
-        // Incremental
-        scoreDirector.beforeProblemPropertyChanged(valueGroup1);
-        valueGroup1.setCode("Other code");
-        scoreDirector.afterProblemPropertyChanged(valueGroup1);
-        assertScore(scoreDirector,
                 assertMatch(valueGroup2));
     }
 }
