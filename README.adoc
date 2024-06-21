@@ -42,6 +42,8 @@ $ cd optaplanner-examples
 $ mvn exec:java
 ----
 
+Trigger CI
+
 To develop with IntelliJ IDEA, Eclipse or VSCode, open the root `pom.xml` as a new project
 and configure a _Run/Debug configuration_ like this:
 
